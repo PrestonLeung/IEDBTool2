@@ -5,7 +5,7 @@ This tool has been developed using a package called EpitopeFinder (Gong and Bloo
 
 Their publication can be found [here](http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004328), and their Github Repository can be found [here](https://github.com/jbloom/epitopefinder).
 
-This pipeline aimed to simplify and reduce the tedious task of manual epitope selection for IFN-γ ELISPOT assay testing by performing a two-step process. 
+This pipeline aimed to simplify and reduce the tedious task of manual epitope selection for IFN-γ ELISPOT assay testing by performing a two-step process and is also used in [Temporal dynamics of viral fitness and the adaptive immune response in HCV infection](https://doi.org/10.7554/eLife.102232.2.sa3) by Walker & Leung et al [^1].
 
 1) *iedb_predictionParser.py* - Predicted epitopes generated from IEDB [prediction algorithm](http://tools.iedb.org/mhci/) downloaded in plain text format is to be parsed into this script to prepare data for the next script. The options available include boundary conditions such as *-lower N* and *-upper N* to indicate the percentile ranking (indicated by N. For instance: -lower 76.0 -upper 5.0) range for extracting relevant subject information such as subject HLA genotypes (the ones chosen for prediction), predicted epitope sequence and the start and end positions of the epitope sequence. *Note* - Percentile ranking in the prediction algorithm puts 100.0 as lower (bad) ranking and numbers closer to 0 are better ranking. 
 
@@ -70,3 +70,9 @@ Parameters for use:
                         Prefix to add to output file name. Otherwise names
                         files with default prefix "Result"
 ```
+
+---
+
+[^1]:Melanie R Walker, Preston Leung, Elizabeth Keoshkerian, Mehdi R Pirozyan, Andrew R Lloyd, Fabio Luciani and Rowena A Bull. **Temporal dynamics of viral fitness and the adaptive immune response in HCV infection.** *eLife, 2025.* DOI:10.7554/eLife.102232.2
+
+
